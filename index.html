@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas 1 :)</title>
+    <link rel="stylesheet" href="bulma.css" />
+    <style>
+        .title, h1{
+            text-align: center;
+        }
+        .subtitle{
+            padding-top: 8vh;
+            text-align: center;
+        }
+        video {
+            padding-left: 27vw;
+            max-width: 55vw;
+        }
+        .buttons {
+            padding-left: 35vw;
+        }
+        #main-content{
+            display: none;
+        }
+        .fotowendi, p{
+            padding-top: 10px;
+            padding-left: 2.5vw;
+        }
+        .fotowendi{
+            padding-left: 33vw;
+        }
+        .quotes {
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body></body>
+    <section>
+            <div class="container">
+                <div class="title">
+                    <h1>Haloo Silpyy, Sibuk yah?</h1>
+                </div>
+                <div class="subtitle">
+                    <p>Mukamu pas in di kamera ya ( sambil senyum biar keliatan manisnya :p ) , terus pencet tombol dibawah</p>
+                </div>
+                <div class="camera">
+                    <video id="player" autoplay></video>
+                </div>
+                <div class="buttons">
+                    <button class="button is-link is-rounded " onclick="clickFunction()">pencet ni</button>
+                </div>
+                <div id="main-content">
+                    <div class="fotowendi">
+                        <img src="wendi.jpeg" alt="" width="200px">
+                        <p><u>Image 1.1 Princess silpy</u></p>
+                    </div>
+                    <div class="quotes">
+                        <p>Eiiii Mirip kali WKWKKWKW,(image 1.1).
+                            eh sil aku gatau harus gimna biar dapet perhatian kao lagi wkwkw entahlah, ada masalah yaa? boleh cerita dong, sapa tau aku bisa bantu soalnya akhir akhirni kao kaya beda gituu dan ga seaktif dulu ato mungkin ga seceria dulu dan tiba tiba hilang :(, maaf kalo aku sok tau juga si cuma gimna men ya, trus kalo uda ada cowo juga bilang yaaa biar aku ga gimna gimna hehe, bales cht aku jugee laa :( 👉🏻👈
+							kalo aku ada salah juga maaf yaaaa. sekian dariku terima kasih  <3
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script> 
+      var player = document.getElementById('player');
+    
+      var handleSuccess = function(stream) {
+        player.srcObject = stream;
+      };
+    
+        navigator.mediaDevices.getUserMedia({video: true})
+            .then(handleSuccess);
+      function clickFunction() {
+        var x = document.getElementById("main-content");
+        if (x.style.display == "block") {
+            x.style.display = "none";
+        } 
+        else {
+            x.style.display = "block";
+        }
+      } 
+    </script>
+</body>
+</html>
